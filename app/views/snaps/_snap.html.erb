@@ -1,0 +1,7 @@
+<div id="<%= dom_id snap %>" class="snap" style="background-color: <%= snap.color %>">
+<%= image_tag url_for(snap.image) if snap.image.attached? %>
+<%# aqui arriba dice, ejecuta esta linea, pero solo si se cumple esta condicion %>
+  <p>
+    <%= snap.title %>
+  </p>
+</div>

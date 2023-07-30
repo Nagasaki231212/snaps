@@ -1,0 +1,16 @@
+<%# todas las vistas de mis snaps estan aqui %>
+
+<p style="color: green"><%= notice %></p>
+
+<h1>Snaps - Comunicate Facilito</h1>
+
+<div id="snaps">
+  <% @snaps.each do |snap| %>
+    <%= render snap %> <%# todos los snaps se estan mostrando utilizando esta linea y esta linea usa parciales, los parciales se muestran con un guion bajo al principio del archivo %>
+    <p>
+      <%= link_to "Show this snap", snap %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New snap", new_snap_path %>
