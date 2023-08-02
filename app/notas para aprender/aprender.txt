@@ -51,3 +51,12 @@
 
 # se instala en la consola de la siguente manera 
 # rails active_storage:install, esto lo que hace es generar una nueva migracion y ya sabemos que cuando hay nueva migraciones corremos rails db:migrate
+
+  # crear base de datos para production
+
+# production y development tienen base de datos diferentes 
+
+# con estos comandos corremos base de datos en production local 
+
+RAILS_ENV=production bundle exec rake db:create
+RAILS_ENV=production bundle exec rake db:schema:load
