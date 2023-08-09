@@ -17,3 +17,9 @@ test:
 production:
   <<: *default
   database: production_database
+  PGDATABASE: <%= ENV.fetch("PGDATABASE") %>
+  PGHOST: <%= ENV.fetch("PGHOST") %>
+  PGPASSWORD: <% ENV.fetch("PGPASSWORD") %>
+  PGPORT: <% ENV.fetch("PGPORT") %> 
+  PGUSER: <% ENV.fetch("PGUSER") %>
+  
